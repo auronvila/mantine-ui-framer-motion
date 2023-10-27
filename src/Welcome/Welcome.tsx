@@ -29,14 +29,15 @@ export function Welcome() {
           </Container>
 
           <div className={classes.controls}>
-            {/*<Button onClick={() => navigate('explore')} className={classes.control} size="lg">Explore More</Button>*/}
             <motion.div
-              style={{ paddingRight:20, paddingLeft:20, paddingTop:20,paddingBottom:20, borderWidth:1, borderRadius:20}}
+              onClick={() => navigate('explore')}
+              style={{ paddingRight: 20, paddingLeft: 20, paddingTop: 20, paddingBottom: 20, borderWidth: 1, borderRadius: 20 }}
               className={classes.customButton}
-              whileHover={{ scale: 1.2 }}
+              whileHover={{ scale: 1.4, padding: 50, borderWidth: 40, borderColor: 'red', borderRadius: 99, msScrollbar3dlightColor: 'blue' }}
               whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            >awdasdwa</motion.div>
+              transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+            >EXPLORE
+            </motion.div>
           </div>
         </div>
       </Container>

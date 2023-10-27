@@ -2,6 +2,7 @@ import { Title, Text, Container, Button } from '@mantine/core';
 import classes from './HeroText.module.css';
 import { Dots } from './Dots.tsx';
 import { useNavigate } from 'react-router-dom';
+import BackGroundMotion from '../BackGroundMotion.tsx';
 
 export function Welcome() {
   const navigate = useNavigate()
@@ -31,6 +32,10 @@ export function Welcome() {
           </div>
         </div>
       </Container>
+    <div style={{flexDirection:'row'}}>
+      <BackGroundMotion/>
+      <BackGroundMotion/>
+    </div>
     </>
   );
 }

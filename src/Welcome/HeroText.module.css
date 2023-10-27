@@ -40,6 +40,12 @@
     top: 0;
 }
 
+.customButton {
+    background-color: deepskyblue;
+    color: black;
+    cursor: pointer;
+}
+
 .title {
     text-align: center;
     font-weight: 800;

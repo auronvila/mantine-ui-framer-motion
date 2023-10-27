@@ -3,6 +3,7 @@ import classes from './HeroText.module.css';
 import { Dots } from './Dots.tsx';
 import { useNavigate } from 'react-router-dom';
 import BackGroundMotion from '../BackGroundMotion.tsx';
+import { motion } from 'framer-motion';
 
 export function Welcome() {
   const navigate = useNavigate()
@@ -28,14 +29,21 @@ export function Welcome() {
           </Container>
 
           <div className={classes.controls}>
-            <Button onClick={() => navigate('explore')} className={classes.control} size="lg">Explore More</Button>
+            {/*<Button onClick={() => navigate('explore')} className={classes.control} size="lg">Explore More</Button>*/}
+            <motion.div
+              style={{ paddingRight:20, paddingLeft:20, paddingTop:20,paddingBottom:20, borderWidth:1, borderRadius:20}}
+              className={classes.customButton}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >awdasdwa</motion.div>
           </div>
         </div>
       </Container>
-    <div style={{flexDirection:'row'}}>
-      <BackGroundMotion/>
-      <BackGroundMotion/>
-    </div>
+      <div style={{ flexDirection: 'row' }}>
+        <BackGroundMotion/>
+        <BackGroundMotion/>
+      </div>
     </>
   );
 }

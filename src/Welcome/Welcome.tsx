@@ -1,28 +1,34 @@
-import { Title, Text, Anchor } from "@mantine/core";
-import * as classes from "./Welcome.css";
+import { Title, Text, Container, Button } from '@mantine/core';
+import classes from './HeroText.module.css';
+import { Dots } from './Dots.tsx';
+import { useNavigate } from 'react-router-dom';
 
 export function Welcome() {
+  const navigate = useNavigate()
   return (
     <>
-      <Title className={classes.title} ta="center" mt={100}>
-        Welcome to{" "}
-        <Text
-          inherit
-          variant="gradient"
-          component="span"
-          gradient={{ from: "pink", to: "yellow" }}
-        >
-          Mantine
-        </Text>
-      </Title>
-      <Text color="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
-        This starter Vite project includes a minimal setup, if you want to learn
-        more on Mantine + Vite integration follow{" "}
-        <Anchor href="https://mantine.dev/guides/vite/" size="lg">
-          this guide
-        </Anchor>
-        . To get started edit pages/Home.page.tsx file.
-      </Text>
+      <Container className={classes.wrapper} top={70} size={1900}>
+        <Dots className={classes.dots} style={{ left: 0, top: 0 }}/>
+        <Dots className={classes.dots} style={{ left: 60, top: 0 }}/>
+        <Dots className={classes.dots} style={{ left: 0, top: 140 }}/>
+        <Dots className={classes.dots} style={{ right: 0, top: 60 }}/>
+
+        <div className={classes.inner}>
+          <Title className={classes.title}>
+            <Text component="span" className={classes.highlight} inherit>WELCOME</Text>{' '}
+          </Title>
+
+          <Container p={0} size={600}>
+            <Text size="xl" c="dimmed" className={classes.description}>
+              Welcome to the site build by Auron Vila using Mantine-UI and framer-motion
+            </Text>
+          </Container>
+
+          <div className={classes.controls}>
+            <Button onClick={() => navigate('explore')} className={classes.control} size="lg">Explore More</Button>
+          </div>
+        </div>
+      </Container>
     </>
   );
 }

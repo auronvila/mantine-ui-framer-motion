@@ -1,8 +1,8 @@
-import { Title, Text, Container, Button } from '@mantine/core';
+import { Title, Text, Container } from '@mantine/core';
 import classes from './HeroText.module.css';
 import { Dots } from './Dots.tsx';
 import { useNavigate } from 'react-router-dom';
-import BackGroundMotion from '../BackGroundMotion.tsx';
+import BackGroundMotion from '../motions/BackGroundMotion.tsx';
 import { motion } from 'framer-motion';
 
 export function Welcome() {

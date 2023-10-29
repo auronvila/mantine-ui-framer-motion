@@ -1,10 +1,10 @@
-import classes from './Welcome/HeroText.module.css';
+import classes from '../Welcome/HeroText.module.css';
 import { motion } from 'framer-motion';
 
 export default function BackGroundMotion() {
   const draw = {
     hidden: { pathLength: 0, opacity: 0 },
-    visible: (i:any) => {
+    visible: (i: any) => {
       const delay = 0.3 + i * 1;
       return {
         pathLength: 1,
@@ -21,7 +21,7 @@ export default function BackGroundMotion() {
       transition={{
         repeat: Infinity,
         repeatType: 'loop',
-        duration: 5,
+        duration: 5
       }}
       className={classes.backgroundAnimation}
       width="600"

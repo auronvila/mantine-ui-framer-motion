@@ -36,7 +36,7 @@ export function Welcome() {
               whileHover={{ scale: 1.4, padding: 50, borderWidth: 40, borderColor: 'red', borderRadius: 99, msScrollbar3dlightColor: 'blue' }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-            >EXPLORE
+            >Basics of motion
             </motion.div>
           </div>
         </div>

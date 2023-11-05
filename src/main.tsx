@@ -5,7 +5,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Explore from './Explore/Explore.tsx';
 import { theme } from './theme.ts';
 import { MantineProvider } from '@mantine/core';
-
 const router = createBrowserRouter([
   {
     path: '/',

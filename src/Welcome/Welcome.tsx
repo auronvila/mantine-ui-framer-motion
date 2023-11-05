@@ -77,6 +77,56 @@ export function Welcome() {
             >Basics of gestures
             </motion.button>
           </div>
+          <div className={classes.controls}>
+            <motion.button
+              onClick={() => navigate('/animationControl')}
+              style={{
+                paddingRight: 20,
+                paddingLeft: 20,
+                paddingTop: 20,
+                paddingBottom: 20,
+                borderWidth: 1,
+                borderRadius: 20
+              }}
+              className={classes.customButton}
+              whileHover={{
+                scale: 1.4,
+                padding: 50,
+                borderRadius: 99,
+                borderWidth: 2,
+                borderColor: 'white',
+                backgroundColor: 'orange',
+                msScrollbar3dlightColor: 'blue'
+              }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+            >Animation Controls</motion.button>
+          </div>
+          <div className={classes.controls}>
+            <motion.button
+              onClick={() => navigate('/viewBased')}
+              style={{
+                paddingRight: 20,
+                paddingLeft: 20,
+                paddingTop: 20,
+                paddingBottom: 20,
+                borderWidth: 1,
+                borderRadius: 20
+              }}
+              className={classes.customButton}
+              whileHover={{
+                scale: 1.4,
+                padding: 50,
+                borderRadius: 99,
+                borderWidth: 2,
+                borderColor: 'white',
+                backgroundColor: 'purple',
+                msScrollbar3dlightColor: 'blue'
+              }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+            >Animation Controls</motion.button>
+          </div>
         </div>
       </Container>
       <div style={{ flexDirection: 'row' }}>

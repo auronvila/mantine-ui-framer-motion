@@ -8,6 +8,8 @@ import { MantineProvider } from '@mantine/core';
 import Gesture from './Gesture/Gesture.tsx';
 import AnimationControls from './AnimationControls/AnimationControls.tsx';
 import ViewBasedAnimations from './viewBasedAnimations/ViewBasedAnimations.tsx';
+import ScrollAnimation from './ScrollAnimation/ScrollAnimation.tsx';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -29,6 +31,10 @@ const router = createBrowserRouter([
     path: '/viewBased',
     element: <ViewBasedAnimations/>
   },
+  {
+    path: '/scrollAnimation',
+    element: <ScrollAnimation/>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

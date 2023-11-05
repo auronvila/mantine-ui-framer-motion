@@ -1,8 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react';
-import classes from '../Welcome/HeroText.module.css';
 import { useNavigate } from 'react-router-dom';
-
+import customStyles from './Button.module.css'
 export default function BasicsOfMotion() {
   const [visible, setVisible] = useState<boolean>(true);
   const navigate = useNavigate()
@@ -11,7 +10,7 @@ export default function BasicsOfMotion() {
     <div style={{ display: 'grid', placeContent: 'center', height: '100vh', gap: '0.8rem' }}>
       <motion.button
         onClick={() => setVisible(!visible)}
-        className={'buttonStyle'}
+        className={customStyles.buttonStyle}
         layout
       >
         Show/Hide
@@ -51,9 +50,9 @@ export default function BasicsOfMotion() {
             paddingTop: 20,
             paddingBottom: 20,
             borderWidth: 1,
-            borderRadius: 20
+            borderRadius: 20,
+            marginRight:15,
           }}
-          className={classes.customButton}
           whileHover={{
             borderWidth: 4,
             borderColor: 'red',

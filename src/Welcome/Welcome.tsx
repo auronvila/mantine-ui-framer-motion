@@ -29,15 +29,53 @@ export function Welcome() {
           </Container>
 
           <div className={classes.controls}>
-            <motion.div
+            <motion.button
               onClick={() => navigate('explore')}
-              style={{ paddingRight: 20, paddingLeft: 20, paddingTop: 20, paddingBottom: 20, borderWidth: 1, borderRadius: 20 }}
+              style={{
+                paddingRight: 20,
+                paddingLeft: 20,
+                paddingTop: 20,
+                paddingBottom: 20,
+                borderWidth: 1,
+                borderRadius: 20
+              }}
               className={classes.customButton}
-              whileHover={{ scale: 1.4, padding: 50, borderWidth: 40, borderColor: 'red', borderRadius: 99, msScrollbar3dlightColor: 'blue' }}
+              whileHover={{
+                scale: 1.4,
+                padding: 50,
+                borderRadius: 99,
+                msScrollbar3dlightColor: 'blue'
+              }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: 'spring', stiffness: 400, damping: 17 }}
             >Basics of motion
-            </motion.div>
+            </motion.button>
+          </div>
+          <div className={classes.controls}>
+            <motion.button
+              onClick={() => navigate('gesture')}
+              style={{
+                paddingRight: 20,
+                paddingLeft: 20,
+                paddingTop: 20,
+                paddingBottom: 20,
+                borderWidth: 1,
+                borderRadius: 20
+              }}
+              className={classes.customButton}
+              whileHover={{
+                scale: 1.4,
+                padding: 50,
+                borderRadius: 99,
+                borderWidth: 2,
+                borderColor: 'white',
+                backgroundColor: 'green',
+                msScrollbar3dlightColor: 'blue'
+              }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+            >Basics of gestures
+            </motion.button>
           </div>
         </div>
       </Container>

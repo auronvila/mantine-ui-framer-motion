@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Explore from './Explore/Explore.tsx';
 import { theme } from './theme.ts';
 import { MantineProvider } from '@mantine/core';
+import Gesture from './Gesture/Gesture.tsx';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -13,7 +14,11 @@ const router = createBrowserRouter([
   {
     path: '/explore',
     element: <Explore/>
-  }
+  },
+  {
+    path: '/gesture',
+    element: <Gesture/>
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
